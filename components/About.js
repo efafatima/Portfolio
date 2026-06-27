@@ -116,17 +116,17 @@ export default function About() {
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(12,15,14,0.96)_0%,rgba(12,15,14,0.78)_48%,rgba(12,15,14,0.95)_100%)]" />
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(12,15,14,0.94)_0%,rgba(12,15,14,0.72)_46%,rgba(12,15,14,0.96)_100%)]" />
 
-        <article data-animate="slide-right" className="relative z-[1] flex min-h-[520px] flex-col justify-end overflow-hidden rounded-[8px] border border-[#F3F7F5]/16 bg-[#0C0F0E]/78 p-7 shadow-2xl shadow-black/45 backdrop-blur-md lg:p-10">
+        <article data-animate="slide-right" className="relative z-[1] flex min-h-0 flex-col justify-end overflow-hidden rounded-[8px] border border-[#F3F7F5]/16 bg-[#0C0F0E]/78 p-5 shadow-2xl shadow-black/45 backdrop-blur-md sm:p-7 lg:min-h-[520px] lg:p-10">
           <div className="relative z-[1]">
             <p className="mb-5 text-xs uppercase tracking-[0.2em] text-[#8FA39A]">(Biography)</p>
-            <h2 className="mb-8 max-w-xl text-4xl font-black uppercase leading-none md:text-6xl">
+            <h2 className="mb-8 max-w-xl text-[clamp(2.25rem,12vw,3.75rem)] font-black uppercase leading-none md:text-6xl">
               Education
               <br />
               <span className="text-[#D7E2DC]/55">& Growth</span>
             </h2>
             <div className="space-y-7">
               {bioParagraphs.map((para) => (
-                <p key={para} className="bio-para text-[1.02rem] leading-[1.85] tracking-normal text-[#F3F7F5]">
+                <p key={para} className="bio-para text-[0.96rem] leading-[1.75] tracking-normal text-[#F3F7F5] sm:text-[1.02rem] sm:leading-[1.85]">
                   {para.split(" ").map((word, index) => (
                     <span key={`${word}-${index}`} className="bio-word inline-block pr-[0.28em] opacity-[0.28]">
                       {word}
@@ -139,7 +139,7 @@ export default function About() {
         </article>
 
         <div className="grid gap-6 lg:grid-rows-[0.48fr_0.52fr]">
-          <article data-animate="slide-left" className="skills-card relative min-h-[300px] overflow-hidden rounded-[8px] border border-[#F3F7F5]/16 bg-[#0C0F0E]/76 p-6 shadow-2xl shadow-black/35 backdrop-blur-md md:p-8">
+          <article data-animate="slide-left" className="skills-card relative min-h-0 overflow-hidden rounded-[8px] border border-[#F3F7F5]/16 bg-[#0C0F0E]/76 p-5 shadow-2xl shadow-black/35 backdrop-blur-md sm:p-6 md:min-h-[300px] md:p-8">
             <div className="relative z-[1] flex h-full flex-col">
               <p className="mb-4 text-xs uppercase tracking-[0.2em] text-[#8FA39A]">(Skills)</p>
               <h3 data-word-reveal className="max-w-md text-2xl font-semibold leading-tight text-[#F3F7F5] md:text-4xl">
@@ -150,7 +150,7 @@ export default function About() {
                   <span
                     key={skill}
                     data-stagger-item
-                    className="skill-pill rounded-full border border-[#D7E2DC]/24 bg-[#0C0F0E]/72 px-5 py-3 text-xs font-medium uppercase tracking-[0.14em] text-[#F3F7F5]/95 shadow-lg shadow-black/25 backdrop-blur-sm"
+                    className="skill-pill rounded-full border border-[#D7E2DC]/24 bg-[#0C0F0E]/72 px-4 py-2.5 text-[0.68rem] font-medium uppercase tracking-[0.1em] text-[#F3F7F5]/95 shadow-lg shadow-black/25 backdrop-blur-sm sm:px-5 sm:py-3 sm:text-xs sm:tracking-[0.14em]"
                     style={{ animationDelay: `${index * 0.18}s` }}
                   >
                     {skill}
@@ -160,10 +160,10 @@ export default function About() {
             </div>
           </article>
 
-          <article data-animate="scale" className="relative min-h-[360px] overflow-hidden rounded-[8px] border border-[#F3F7F5]/16 bg-[#0C0F0E]/76 p-6 shadow-2xl shadow-black/35 backdrop-blur-md md:p-8">
+          <article data-animate="scale" className="relative min-h-0 overflow-hidden rounded-[8px] border border-[#F3F7F5]/16 bg-[#0C0F0E]/76 p-5 shadow-2xl shadow-black/35 backdrop-blur-md sm:p-6 md:min-h-[360px] md:p-8">
             <div className="relative z-[1]">
               <p className="mb-6 text-xs uppercase tracking-[0.2em] text-[#8FA39A]">(Vision)</p>
-              <p className="vision-copy max-w-2xl text-xl font-light leading-[1.55] md:text-3xl">
+              <p className="vision-copy max-w-2xl text-lg font-light leading-[1.6] sm:text-xl md:text-3xl md:leading-[1.55]">
                 {visionWords.map((word, index) => (
                   <span key={`${word}-${index}`} className="vision-word inline-block pr-2 opacity-20">
                     {word}
@@ -175,22 +175,22 @@ export default function About() {
         </div>
       </div>
 
-      <div className="relative flex min-h-screen items-center overflow-hidden px-6 py-20 lg:px-10">
+      <div className="relative flex min-h-screen items-center overflow-hidden px-5 py-20 sm:px-6 lg:px-10">
         <img src={servicesImage.src} alt="" data-image-reveal data-parallax="-7" className="pointer-events-none absolute inset-0 h-[115%] w-full object-cover object-center opacity-60" />
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(12,15,14,0.9)_0%,rgba(12,15,14,0.52)_48%,rgba(12,15,14,0.88)_100%)]" />
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(12,15,14,0.88)_0%,rgba(12,15,14,0.32)_48%,rgba(12,15,14,0.92)_100%)]" />
         <div className="pointer-events-none absolute bottom-6 right-0 h-[520px] w-[520px] bg-[radial-gradient(circle,rgba(143,163,154,0.1)_0%,rgba(12,15,14,0)_70%)]" />
 
-        <div data-animate="fade-up" className="relative z-[1] w-full rounded-[8px] border border-[#F3F7F5]/10 bg-[#0C0F0E]/42 p-7 shadow-2xl shadow-black/35 backdrop-blur-sm lg:p-10">
+        <div data-animate="fade-up" className="relative z-[1] w-full rounded-[8px] border border-[#F3F7F5]/10 bg-[#0C0F0E]/42 p-5 shadow-2xl shadow-black/35 backdrop-blur-sm sm:p-7 lg:p-10">
           <p className="mb-6 text-xs uppercase tracking-[0.2em] text-[#8FA39A]">(Services)</p>
-          <h2 className="max-w-5xl text-4xl font-black leading-none md:text-7xl">
+          <h2 className="max-w-5xl text-[clamp(2.1rem,11vw,4.5rem)] font-black leading-[0.98] md:text-7xl">
             What I can help for your
             <br />
             <span className="text-[#D7E2DC]">Business</span> / Product
           </h2>
           <div data-stagger="0.1" className="services-list mt-16">
             {services.map((service) => (
-              <article key={service.number} data-stagger-item className="service-card group grid border-t border-[#F3F7F5]/14 py-10 transition-colors duration-300 hover:border-[#8FA39A] hover:bg-[#141A18]/80 md:grid-cols-[0.2fr_1fr]">
+              <article key={service.number} data-stagger-item className="service-card group grid gap-4 border-t border-[#F3F7F5]/14 py-8 transition-colors duration-300 hover:border-[#8FA39A] hover:bg-[#141A18]/80 md:grid-cols-[0.2fr_1fr] md:gap-0 md:py-10">
                 <span className="text-xs uppercase tracking-[0.2em] text-[#F3F7F5]/48 transition-colors duration-300 group-hover:text-[#D7E2DC]">{service.number}</span>
                 <div>
                   <h3 className="text-2xl font-semibold transition-colors duration-300 group-hover:text-[#D7E2DC]">{service.title}</h3>

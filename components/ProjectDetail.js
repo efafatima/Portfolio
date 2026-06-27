@@ -38,7 +38,7 @@ export default function ProjectDetail({ project }) {
   return (
     <main className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)]">
       <section className="relative min-h-screen overflow-hidden">
-        <Link href="/#work" className="absolute left-8 top-8 z-20 text-xs text-[var(--text-muted)] transition-colors hover:text-[var(--text-primary)]">
+        <Link href="/#work" className="absolute left-5 top-6 z-20 text-xs text-[var(--text-muted)] transition-colors hover:text-[var(--text-primary)] sm:left-8 sm:top-8">
           &larr; Back
         </Link>
 
@@ -48,9 +48,9 @@ export default function ProjectDetail({ project }) {
           <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-primary)] via-[var(--bg-primary)]/0 to-[var(--bg-primary)]/0" />
         </div>
 
-        <div className="relative z-10 grid min-h-screen content-end gap-12 px-8 pb-8 pt-28 lg:grid-cols-[1fr_0.35fr] lg:px-10">
+        <div className="relative z-10 grid min-h-screen content-end gap-12 px-5 pb-10 pt-28 sm:px-8 lg:grid-cols-[1fr_0.35fr] lg:px-10">
           <div data-animate="fade-up" className="overflow-hidden">
-            <h1 className="max-w-5xl translate-y-4 text-[clamp(4.5rem,10vw,9rem)] font-black uppercase leading-[0.86] tracking-normal">
+            <h1 className="max-w-5xl translate-y-4 break-words text-[clamp(3rem,15vw,9rem)] font-black uppercase leading-[0.88] tracking-normal sm:text-[clamp(4.5rem,10vw,9rem)] sm:leading-[0.86]">
               {project.title}
             </h1>
           </div>
@@ -66,7 +66,7 @@ export default function ProjectDetail({ project }) {
         </div>
       </section>
 
-      <section className="relative min-h-screen px-8 py-28 lg:grid lg:grid-cols-[0.25fr_1fr_0.3fr] lg:gap-12 lg:px-10">
+      <section className="relative min-h-screen px-5 py-20 sm:px-8 sm:py-28 lg:grid lg:grid-cols-[0.25fr_1fr_0.3fr] lg:gap-12 lg:px-10">
         <aside className="sticky top-28 hidden h-fit text-xs text-[var(--text-muted)] lg:block">
           <p className="mb-20 text-[var(--text-primary)]">(Intro)</p>
           <p className="mb-4">Summary</p>
@@ -82,10 +82,10 @@ export default function ProjectDetail({ project }) {
         </aside>
 
         <div className="max-w-4xl">
-          <p data-animate="fade-up" className="mb-14 text-[clamp(1.8rem,3vw,3.5rem)] font-semibold leading-tight">
+          <p data-animate="fade-up" className="mb-10 text-[clamp(1.45rem,8vw,3.5rem)] font-semibold leading-tight sm:mb-14 sm:text-[clamp(1.8rem,3vw,3.5rem)]">
             {project.summary}
           </p>
-          <p data-animate="fade-up" className="mb-24 text-[clamp(1.6rem,2.6vw,3rem)] font-semibold leading-tight text-[var(--text-primary)]">
+          <p data-animate="fade-up" className="mb-16 text-[clamp(1.3rem,7vw,3rem)] font-semibold leading-tight text-[var(--text-primary)] sm:mb-24 sm:text-[clamp(1.6rem,2.6vw,3rem)]">
             {project.description}
           </p>
 
@@ -119,8 +119,8 @@ export default function ProjectDetail({ project }) {
 
 function ContentSection({ id, title, children }) {
   return (
-    <section id={id} data-animate="fade-up" className="scroll-mt-28 border-t border-[var(--bg-surface)] py-20">
-      <h2 data-word-reveal className="mb-8 text-4xl font-bold">{title}</h2>
+    <section id={id} data-animate="fade-up" className="scroll-mt-28 border-t border-[var(--bg-surface)] py-14 sm:py-20">
+      <h2 data-word-reveal className="mb-6 text-3xl font-bold sm:mb-8 sm:text-4xl">{title}</h2>
       <div className="max-w-3xl leading-8 text-[var(--text-muted)]">{children}</div>
     </section>
   );

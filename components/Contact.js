@@ -113,7 +113,7 @@ export default function Contact() {
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,#0C0F0E_0%,rgba(12,15,14,0.86)_25%,rgba(12,15,14,0.24)_100%)]" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[50vh] bg-[linear-gradient(180deg,rgba(12,15,14,0)_0%,rgba(52,211,153,0.38)_100%)]" />
 
-      <div className="relative z-[1] grid min-h-screen grid-cols-1 px-6 pb-8 pt-28 md:px-10 lg:grid-cols-[0.24fr_0.31fr_0.45fr] lg:pt-24">
+      <div className="relative z-[1] grid min-h-svh grid-cols-1 px-5 pb-8 pt-24 sm:px-6 md:px-10 lg:min-h-screen lg:grid-cols-[0.24fr_0.31fr_0.45fr] lg:pt-24">
         <aside data-animate="slide-right" className="z-[2] hidden flex-col justify-between pb-24 text-xs text-[#8FA39A] lg:flex">
           <div className="mb-8">
             <p className="contact-kicker mb-4 text-[#8FA39A]">Got a project in mind?</p>
@@ -123,7 +123,7 @@ export default function Contact() {
           </div>
         </aside>
 
-        <div ref={portraitWrapRef} data-animate="scale" className="pointer-events-none absolute bottom-[-14vh] left-1/2 z-[2] h-[112vh] w-[min(68vw,920px)] -translate-x-[58%] lg:left-[42%] lg:translate-x-[-50%]">
+        <div ref={portraitWrapRef} data-animate="scale" className="pointer-events-none absolute bottom-[4.5rem] left-1/2 z-[2] h-[54svh] w-[min(96vw,28rem)] -translate-x-1/2 opacity-55 sm:h-[64svh] sm:w-[min(82vw,34rem)] md:bottom-[-8vh] md:h-[92vh] md:w-[min(68vw,720px)] md:opacity-80 lg:bottom-[-14vh] lg:left-[42%] lg:h-[112vh] lg:w-[min(68vw,920px)] lg:translate-x-[-50%] lg:opacity-100">
           <img
             ref={portraitRef}
             src={girlImage.src}
@@ -132,26 +132,26 @@ export default function Contact() {
           />
         </div>
 
-        <div className="relative z-[3] flex min-h-[54vh] flex-col justify-end lg:col-start-3 lg:min-h-0 lg:justify-start lg:pt-20">
-          <div data-animate="fade-up" className="mb-14 lg:hidden">
+        <div className="relative z-[3] flex min-h-[66svh] flex-col justify-between pb-28 lg:col-start-3 lg:min-h-0 lg:justify-start lg:pb-0 lg:pt-20">
+          <div data-animate="fade-up" className="mb-10 lg:hidden">
             <p className="contact-kicker mb-4 text-xs text-[#8FA39A]">Got a project in mind?</p>
             <h2 data-word-reveal className="contact-title max-w-[360px] text-[clamp(2.4rem,11vw,4rem)] font-normal leading-[1.04] text-[#F3F7F5]">
               Let&apos;s make something happen together
             </h2>
           </div>
 
-          <p ref={quoteRef} data-animate="slide-left" className="ml-auto flex max-w-[660px] flex-wrap gap-x-[0.35em] text-[clamp(1.45rem,2.2vw,2.7rem)] font-normal leading-[1.22] text-[#F3F7F5]">
+          <p ref={quoteRef} data-animate="slide-left" className="ml-auto flex max-w-[660px] flex-wrap gap-x-[0.35em] text-[clamp(1.08rem,5vw,2.7rem)] font-normal leading-[1.35] text-[#F3F7F5] sm:text-[clamp(1.45rem,2.2vw,2.7rem)] sm:leading-[1.22]">
             {splitWords(quote)}
           </p>
         </div>
 
-        <div ref={emailRef} className="absolute bottom-9 left-0 z-[4] w-full overflow-hidden">
+        <div ref={emailRef} className="absolute bottom-7 left-0 z-[4] w-full overflow-hidden sm:bottom-9">
           <div className="contact-marquee flex whitespace-nowrap">
             {Array.from({ length: 4 }).map((_, index) => (
               <a
                 key={index}
                 href={`mailto:${email}`}
-                className="contact-email inline-block pr-12 text-[clamp(4.4rem,10vw,10.5rem)] font-black lowercase leading-[0.82] tracking-normal text-[#F3F7F5] transition-colors duration-300 hover:text-[#34D399]"
+                className="contact-email inline-block pr-8 text-[clamp(2.55rem,15vw,10.5rem)] font-black lowercase leading-[0.88] tracking-normal text-[#F3F7F5] transition-colors duration-300 hover:text-[#34D399] sm:pr-12 sm:text-[clamp(4.4rem,10vw,10.5rem)] sm:leading-[0.82]"
               >
                 {email}
               </a>

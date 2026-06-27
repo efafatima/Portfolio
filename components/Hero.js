@@ -77,14 +77,14 @@ export default function Hero() {
     <section
       id="home"
       ref={sectionRef}
-      className="relative h-screen w-full cursor-none overflow-hidden bg-[#0C0F0E]"
+      className="relative min-h-svh w-full cursor-none overflow-hidden bg-[#0C0F0E]"
       style={{ perspective: "1200px" }}
     >
       <img
         ref={bgRef}
         src={heroBg.src}
         alt="Affifa Fatima background"
-        className="absolute left-0 top-[-8vh] z-[1] h-[116vh] w-full object-cover object-center opacity-0 will-change-transform"
+        className="absolute left-0 top-[-8vh] z-[1] h-[116svh] w-full object-cover object-center opacity-0 will-change-transform"
       />
 
       <div
@@ -97,12 +97,12 @@ export default function Hero() {
       <div
         className="pointer-events-none absolute inset-0 z-[3]"
       >
-        <div className="absolute bottom-16 left-8">
+        <div className="absolute bottom-20 left-5 max-w-[calc(100vw-2.5rem)] sm:left-8 md:bottom-16">
           <p className="hero-subheading mb-1 text-sm text-[#8FA39A]">Hi there! this is</p>
           <p className="hero-subheading mb-6 text-lg font-light text-[#F3F7F5]">
             <strong>Affifa</strong> <span className="text-[#8FA39A]">Fatima</span>
           </p>
-          <h1 className="hero-text text-[clamp(56px,8.5vw,120px)] font-black uppercase leading-[0.9] tracking-normal text-[#F3F7F5]">
+          <h1 className="hero-text text-[clamp(2.7rem,14.8vw,7.5rem)] font-black uppercase leading-[0.9] tracking-normal text-[#F3F7F5] sm:text-[clamp(3.5rem,8.5vw,7.5rem)]">
             {renderChars(["FULL STACK", "WEB & MOBILE"])}
             <span className="block overflow-hidden">
               <span ref={developerRef} className="inline-block text-[#8FA39A]">
@@ -116,7 +116,7 @@ export default function Hero() {
           </h1>
           <a
             href="#work"
-            className="hero-button pointer-events-auto mt-8 inline-flex items-center rounded-full border border-[#34D399]/40 bg-[#0C0F0E]/40 px-6 py-3 text-xs font-bold uppercase tracking-[0.18em] text-[#F3F7F5] backdrop-blur-sm transition-all duration-300 hover:border-[#34D399] hover:bg-[#34D399] hover:text-[#0C0F0E]"
+            className="hero-button pointer-events-auto mt-7 inline-flex max-w-full items-center rounded-full border border-[#34D399]/40 bg-[#0C0F0E]/40 px-5 py-3 text-[0.68rem] font-bold uppercase tracking-[0.12em] text-[#F3F7F5] backdrop-blur-sm transition-all duration-300 hover:border-[#34D399] hover:bg-[#34D399] hover:text-[#0C0F0E] sm:mt-8 sm:px-6 sm:text-xs sm:tracking-[0.18em]"
           >
             View Projects &rarr;
           </a>
@@ -144,7 +144,7 @@ export default function Hero() {
           </p>
         </div>
 
-        <p className="hero-panel-item absolute bottom-8 left-8 text-xs tracking-[0.1em] text-[#8FA39A]">(Scroll down)</p>
+        <p className="hero-panel-item absolute bottom-7 left-5 text-xs tracking-[0.1em] text-[#8FA39A] sm:left-8">(Scroll down)</p>
       </div>
 
       <div
