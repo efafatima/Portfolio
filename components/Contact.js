@@ -87,20 +87,30 @@ export default function Contact() {
         }
       });
 
-      gsap.fromTo(
-        emailRef.current,
-        { opacity: 0, y: 60 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1.1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: emailRef.current,
-            start: "top 88%"
+      const mm = gsap.matchMedia();
+
+      mm.add("(max-width: 767px)", () => {
+        gsap.set(emailRef.current, { opacity: 1, y: 0 });
+      });
+
+      mm.add("(min-width: 768px)", () => {
+        gsap.fromTo(
+          emailRef.current,
+          { opacity: 0, y: 60 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1.1,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: emailRef.current,
+              start: "top 88%"
+            }
           }
-        }
-      );
+        );
+      });
+
+      return () => mm.revert();
     }, sectionRef);
 
     return () => ctx.revert();

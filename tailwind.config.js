@@ -11,7 +11,7 @@ module.exports = {
         ivory: "#F3F7F5"
       },
       fontFamily: {
-        display: ["var(--font-display)", "serif"],
+        display: ["var(--font-body)", "sans-serif"],
         body: ["var(--font-body)", "sans-serif"]
       }
     }

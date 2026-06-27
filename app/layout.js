@@ -1,15 +1,9 @@
-import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 import CustomCursor from "@/components/CustomCursor";
 import GlobalScrollEffects from "@/components/GlobalScrollEffects";
 import Navbar from "@/components/Navbar";
-
-const display = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-display"
-});
 
 const body = DM_Sans({
   subsets: ["latin"],
@@ -31,7 +25,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable}`}>
+    <html lang="en" className={body.variable}>
       <body>
         <SmoothScrollProvider>
           <GlobalScrollEffects />

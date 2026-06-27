@@ -100,16 +100,28 @@ export default function Navbar() {
 
       <div
         ref={panelRef}
-        className="fixed right-0 top-0 z-[101] flex h-dvh w-full translate-x-full flex-col justify-end gap-8 border-l border-[#F3F7F5]/10 bg-[#0C0F0E]/38 px-8 pb-16 text-4xl font-display normal-case tracking-normal text-ivory shadow-2xl shadow-black/30 backdrop-blur-md md:hidden"
+        className="fixed right-0 top-0 z-[101] flex h-dvh w-full translate-x-full flex-col justify-end bg-[#0C0F0E]/34 px-5 pb-12 pt-24 text-ivory backdrop-blur-md md:hidden"
       >
-        {links.map((link) => (
-          <a key={link.href} href={link.href} onClick={() => setOpen(false)}>
-            {link.label}
+        <div className="rounded-[8px] border border-[#F3F7F5]/14 bg-[#0C0F0E]/34 shadow-2xl shadow-black/35">
+          {links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={() => setOpen(false)}
+              className="block border-b border-[#F3F7F5]/12 px-5 py-5 text-[1.35rem] font-medium leading-none tracking-normal"
+            >
+              {link.label}
+            </a>
+          ))}
+          <a
+            href="/Affifa-Fatima-CV.pdf"
+            download
+            onClick={() => setOpen(false)}
+            className="block px-5 py-5 text-[1.35rem] font-medium leading-none tracking-normal text-[#34D399]"
+          >
+            Download CV
           </a>
-        ))}
-        <a href="/Affifa-Fatima-CV.pdf" download onClick={() => setOpen(false)}>
-          Download CV
-        </a>
+        </div>
       </div>
     </header>
   );
