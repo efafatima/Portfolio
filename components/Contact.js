@@ -123,7 +123,7 @@ export default function Contact() {
           </div>
         </aside>
 
-        <div ref={portraitWrapRef} data-animate="scale" className="pointer-events-none absolute bottom-[4.5rem] left-1/2 z-[2] h-[54svh] w-[min(96vw,28rem)] -translate-x-1/2 opacity-55 sm:h-[64svh] sm:w-[min(82vw,34rem)] md:bottom-[-8vh] md:h-[92vh] md:w-[min(68vw,720px)] md:opacity-80 lg:bottom-[-14vh] lg:left-[42%] lg:h-[112vh] lg:w-[min(68vw,920px)] lg:translate-x-[-50%] lg:opacity-100">
+        <div ref={portraitWrapRef} data-animate="scale" className="pointer-events-none absolute bottom-[3.4rem] left-1/2 z-[2] h-[66svh] w-[min(122vw,34rem)] -translate-x-1/2 opacity-70 sm:h-[72svh] sm:w-[min(96vw,40rem)] md:bottom-[-8vh] md:h-[92vh] md:w-[min(68vw,720px)] md:opacity-80 lg:bottom-[-14vh] lg:left-[42%] lg:h-[112vh] lg:w-[min(68vw,920px)] lg:translate-x-[-50%] lg:opacity-100">
           <img
             ref={portraitRef}
             src={girlImage.src}

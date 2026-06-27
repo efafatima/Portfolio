@@ -242,9 +242,14 @@ export default function Work() {
               data-stagger-item
               className="flex min-h-svh flex-col justify-center px-5 py-24 sm:px-8"
             >
-              <img src={project.image} alt={project.title} data-image-reveal className="mb-8 aspect-[4/5] max-h-[48svh] w-full object-cover sm:mb-10 sm:aspect-[5/4]" />
+              <a href={project.link} aria-label={`Open ${project.title} details`} className="mb-8 block sm:mb-10">
+                <img src={project.image} alt={project.title} data-image-reveal className="aspect-[4/5] max-h-[48svh] w-full object-cover sm:aspect-[5/4]" />
+              </a>
               <h2 className="mb-6 break-words text-[clamp(2.45rem,12vw,3.75rem)] font-black uppercase leading-none sm:mb-8">{project.title}</h2>
               <p className="text-sm leading-7 text-[var(--text)]">{project.description}</p>
+              <a href={project.link} className="mt-8 inline-block text-sm font-semibold underline underline-offset-4">
+                Project Details &rarr;
+              </a>
               <a href={getGithubLink(project)} target="_blank" rel="noreferrer" className="mt-10 inline-block text-sm underline underline-offset-4">
                 GitHub Repo &rarr;
               </a>

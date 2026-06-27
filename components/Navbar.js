@@ -100,7 +100,7 @@ export default function Navbar() {
 
       <div
         ref={panelRef}
-        className="fixed right-0 top-0 z-[101] flex h-dvh w-full translate-x-full flex-col justify-end gap-8 bg-charcoal px-8 pb-16 text-4xl font-display normal-case tracking-normal text-ivory md:hidden"
+        className="fixed right-0 top-0 z-[101] flex h-dvh w-full translate-x-full flex-col justify-end gap-8 border-l border-[#F3F7F5]/10 bg-[#0C0F0E]/38 px-8 pb-16 text-4xl font-display normal-case tracking-normal text-ivory shadow-2xl shadow-black/30 backdrop-blur-md md:hidden"
       >
         {links.map((link) => (
           <a key={link.href} href={link.href} onClick={() => setOpen(false)}>

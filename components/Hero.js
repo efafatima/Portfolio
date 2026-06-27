@@ -8,7 +8,7 @@ import heroBg from "./Assest/bg.png";
 
 function renderChars(lines) {
   return lines.map((line) => (
-    <span key={line} className="block overflow-hidden">
+    <span key={line} className="block overflow-hidden whitespace-nowrap">
       {line.split("").map((char, charIndex) => (
         <span key={`${line}-${charIndex}`} className="hero-heading-char inline-block">
           {char === " " ? "\u00A0" : char}
@@ -68,6 +68,16 @@ export default function Hero() {
         { color: "#F3F7F5", rotateX: 78, rotate: -4, y: 18, transformOrigin: "left center" },
         { color: "#8FA39A", rotateX: 0, rotate: 0, y: 0, duration: 1, delay: 0.95, ease: "power3.out" }
       );
+
+      gsap.to(developerRef.current, {
+        rotateX: 360,
+        duration: 0.95,
+        delay: 3,
+        repeat: -1,
+        repeatDelay: 3,
+        transformOrigin: "center center",
+        ease: "power3.inOut"
+      });
     }, sectionRef);
 
     return () => ctx.revert();
@@ -102,10 +112,10 @@ export default function Hero() {
           <p className="hero-subheading mb-6 text-lg font-light text-[#F3F7F5]">
             <strong>Affifa</strong> <span className="text-[#8FA39A]">Fatima</span>
           </p>
-          <h1 className="hero-text text-[clamp(2.7rem,14.8vw,7.5rem)] font-black uppercase leading-[0.9] tracking-normal text-[#F3F7F5] sm:text-[clamp(3.5rem,8.5vw,7.5rem)]">
+          <h1 className="hero-text text-[clamp(2.35rem,12.4vw,7.5rem)] font-black uppercase leading-[0.9] tracking-normal text-[#F3F7F5] min-[390px]:text-[clamp(2.55rem,13vw,7.5rem)] sm:text-[clamp(3.5rem,8.5vw,7.5rem)]">
             {renderChars(["FULL STACK", "WEB & MOBILE"])}
             <span className="block overflow-hidden">
-              <span ref={developerRef} className="inline-block text-[#8FA39A]">
+              <span ref={developerRef} className="inline-block whitespace-nowrap text-[#8FA39A]">
                 {"DEVELOPER".split("").map((char, index) => (
                   <span key={index} className="hero-heading-char inline-block">
                     {char}
