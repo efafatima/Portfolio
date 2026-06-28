@@ -247,9 +247,6 @@ export default function Work() {
               </a>
               <h2 className="mb-6 break-words text-[clamp(2.45rem,12vw,3.75rem)] font-black uppercase leading-none sm:mb-8">{project.title}</h2>
               <p className="text-sm leading-7 text-[var(--text)]">{project.description}</p>
-              <a href={project.link} className="mt-8 inline-block text-sm font-semibold underline underline-offset-4">
-                Project Details &rarr;
-              </a>
               <a href={getGithubLink(project)} target="_blank" rel="noreferrer" className="mt-10 inline-block text-sm underline underline-offset-4">
                 GitHub Repo &rarr;
               </a>

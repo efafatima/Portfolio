@@ -161,7 +161,7 @@ export default function Contact() {
               <a
                 key={index}
                 href={`mailto:${email}`}
-                className="contact-email inline-block pr-8 text-[clamp(2.55rem,15vw,10.5rem)] font-black lowercase leading-[0.88] tracking-normal text-[#F3F7F5] transition-colors duration-300 hover:text-[#34D399] sm:pr-12 sm:text-[clamp(4.4rem,10vw,10.5rem)] sm:leading-[0.82]"
+                className="contact-email inline-block pr-8 text-[clamp(2.1rem,11.5vw,10.5rem)] font-black lowercase leading-[0.92] tracking-normal text-[#F3F7F5] transition-colors duration-300 hover:text-[#34D399] sm:pr-12 sm:text-[clamp(4.4rem,10vw,10.5rem)] sm:leading-[0.82]"
               >
                 {email}
               </a>
@@ -172,7 +172,7 @@ export default function Contact() {
 
       <style jsx global>{`
         .contact-marquee {
-          animation: contact-marquee 16s linear infinite;
+          animation: contact-marquee 11s linear infinite;
         }
 
         .contact-marquee:hover {
@@ -196,7 +196,7 @@ export default function Contact() {
 
         @media (max-width: 768px) {
           .contact-marquee {
-            animation-duration: 22s;
+            animation-duration: 14s;
           }
         }
       `}</style>
